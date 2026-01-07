@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library | Search Book</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS External -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <i class="fas fa-book-reader"></i>
+                <span>Digital<span style="color:var(--accent)">Library</span></span>
+            </div>
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Search by title, author, or ISBN...">
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="section-header">
+            <h2 id="shelfTitle">Editor's Choice</h2>
+            <p>Discover this week's best reads</p>
+        </div>
+
+        <div id="loader" class="loader-container hidden">
+            <div class="loader"></div>
+        </div>
+
+        <div id="bookContainer" class="book-grid">
+            <!-- Items injected via JS -->
+        </div>
+    </main>
+
+    <!-- Modal Detail -->
+    <div id="bookModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="close-modal">&#x2716;</div>
+            
+            <div class="modal-left">
+                <img id="modalImage" src="" alt="Book Cover">
+            </div>
+            
+            <div class="modal-right">
+                <span class="modal-tag" id="modalCategory">Fiction</span>
+                <h2 class="modal-title" id="modalTitle">Book Title</h2>
+                <div class="modal-author" id="modalAuthor">Author</div>
+                
+                <div class="modal-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Published</span>
+                        <span class="stat-value" id="modalDate">2023</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Pages</span>
+                        <span class="stat-value" id="modalPages">300</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Rating</span>
+                        <span class="stat-value" id="modalRating"><i class="fas fa-star" style="color:#FFD700"></i> 4.5</span>
+                    </div>
+                </div>
+
+                <div class="modal-desc" id="modalDesc">
+                    Book description will appear here...
+                </div>
+                
+                <a href="#" id="modalLink" target="_blank" class="btn-read">
+                    Read More <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS External -->
+    <script src="script.js"></script>
+</body>
+</html>
