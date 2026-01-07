@@ -1,2 +1,2 @@
-# book-project
+# Book Project
 First JavaScript project.
